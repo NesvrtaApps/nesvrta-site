@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nesvrta — wordmark reversed, paper #F4F0E7 — place on ink. Monoline geometric, cap height 100, stroke 12.
+     Strokes are live: apply Object > Expand / Outline Stroke once before sending to print or cutting. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 618 122" width="618" height="122" role="img" aria-label="Nesvrta">
+  <defs>
+    <clipPath id="bandA"><rect x="-40" y="0" width="760" height="100"/></clipPath>
+    <clipPath id="tailA"><rect x="-40" y="0" width="760" height="150"/></clipPath>
+  </defs>
+  <g fill="none" stroke="#F4F0E7" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12">
+    <g clip-path="url(#bandA)"><path d="M6 0V100"/><path d="M68 0V100"/>
+    <path d="M106 0V100"/><path d="M100 6H164"/><path d="M100 50H156"/><path d="M100 94H164"/>
+    <path d="M246 24C241 13 233 6 222 6C206 6 194 14 194 27C194 39 204 45 222 48C240 51 250 58 250 71C250 85 238 94 222 94C211 94 202 89 198 79"/>
+    <path d="M282 0L313 83L344 0"/>
+    <path d="M376 0V100"/><path d="M376 6H408C422 6 430 14 430 25C430 36 422 44 408 44H376"/><path d="M406 44L430 100"/>
+    <path d="M456 6H520"/><path d="M488 0V100"/>
+    <path d="M542 100L573 17L604 100"/><path d="M550 70H596"/></g>
+    <g clip-path="url(#tailA)"><path d="M6 0L76.4 113.6"/></g>
+  </g>
+</svg>

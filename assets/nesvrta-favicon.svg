@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nesvrta — favicon — micro cut, reads at 16px. Monoline geometric, cap height 100, stroke 12.
+     Strokes are live: apply Object > Expand / Outline Stroke once before sending to print or cutting. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Nesvrta">
+  <rect width="200" height="200" rx="40" fill="#16130F"/>
+  <defs>
+    <clipPath id="fB"><rect x="-40" y="0" width="400" height="100"/></clipPath>
+    <clipPath id="fT"><rect x="-40" y="0" width="400" height="150"/></clipPath>
+  </defs>
+  <g fill="none" stroke="#F4F0E7" stroke-width="20" stroke-linecap="butt" transform="translate(63,44) scale(0.94)">
+    <g clip-path="url(#fB)"><path d="M6 0V100"/><path d="M68 0V100"/></g>
+    <g clip-path="url(#fT)"><path d="M6 0L76.4 113.6"/></g>
+  </g>
+</svg>

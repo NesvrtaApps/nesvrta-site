@@ -1,0 +1,241 @@
+/* ============================================================
+   Nesvrta LLC — nesvrta.com
+   Palette and rules per brand README:
+   Ink #16130F · Paper #F4F0E7 · Clay #C4552E · Stone #8C8578
+   ============================================================ */
+
+:root {
+  --ink:   #16130F;
+  --paper: #F4F0E7;
+  --clay:  #C4552E;
+  --stone: #8C8578;          /* decorative: hairlines, large labels */
+  --stone-text: #6B6558;     /* readable secondary text (AA on paper) */
+  --hairline: rgba(22, 19, 15, 0.18);
+  --max: 68rem;
+  --rail: 11rem;             /* left label rail on wide screens */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:   #F4F0E7;        /* roles swap: paper strokes on ink ground */
+    --paper: #16130F;
+    --clay:  #D96B43;        /* clay lifted slightly for dark contrast */
+    --stone: #8C8578;
+    --stone-text: #A69E8F;
+    --hairline: rgba(244, 240, 231, 0.22);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- logo SVGs inherit theme ---------------------------------- */
+.logo-svg g[stroke] { stroke: var(--ink); }
+
+/* --- header ---------------------------------------------------- */
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem;
+}
+header.site .wordmark {
+  display: block;
+  line-height: 0;
+  color: var(--ink);
+}
+header.site .wordmark svg {
+  width: clamp(120px, 16vw, 168px);  /* never below the 90px minimum */
+  height: auto;
+  display: block;
+}
+nav.site a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  margin-left: 1.75rem;
+}
+nav.site a:hover { color: var(--clay); }
+nav.site a:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+.rule { border: 0; border-top: 1px solid var(--hairline); margin: 0; }
+
+/* --- sections: label rail + content ---------------------------- */
+main { display: block; }
+
+section.band {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: var(--rail) 1fr;
+  gap: 2rem 3rem;
+}
+@media (max-width: 46rem) {
+  section.band { grid-template-columns: 1fr; padding: 3.5rem 1.25rem; gap: 1.25rem; }
+}
+
+.label {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone);
+  padding-top: 0.55rem;
+}
+
+h1, h2, h3 { font-weight: 650; letter-spacing: -0.015em; margin: 0 0 1rem; }
+h1 { font-size: clamp(2.1rem, 5.4vw, 3.4rem); line-height: 1.08; }
+h2 { font-size: clamp(1.45rem, 3vw, 1.9rem); line-height: 1.2; }
+h3 { font-size: 1.125rem; margin-bottom: 0.35rem; }
+
+p  { margin: 0 0 1rem; max-width: 42rem; }
+.muted { color: var(--stone-text); }
+
+a.inline, main a:not(.btn):not(.item-row) {
+  color: var(--clay);
+  text-decoration: none;
+}
+main a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* --- hero ------------------------------------------------------- */
+.hero { position: relative; overflow: hidden; }
+.hero .eyebrow {
+  font-size: 0.875rem;
+  color: var(--stone-text);
+  margin-bottom: 1.25rem;
+}
+.hero .cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--clay);
+  font-weight: 600;
+  text-decoration: none;
+}
+.hero .cta::after { content: " \2192"; }
+.hero .cta:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* the signature: the N's own diagonal, drawn once, faint, off-canvas right */
+.hero .watermark {
+  position: absolute;
+  right: -4rem;
+  top: -2rem;
+  width: clamp(220px, 30vw, 420px);
+  opacity: 0.07;
+  pointer-events: none;
+}
+.hero .watermark g[stroke] { stroke: var(--ink); }
+
+/* --- practice list ---------------------------------------------- */
+ol.practices { list-style: none; margin: 0; padding: 0; }
+ol.practices li {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--hairline);
+}
+ol.practices li:last-child { border-bottom: 1px solid var(--hairline); }
+ol.practices .num { color: var(--stone); font-size: 0.875rem; padding-top: 0.3rem; }
+ol.practices p { margin: 0; color: var(--stone-text); }
+
+/* --- featured product ------------------------------------------- */
+.product-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1rem;
+  max-width: 42rem;
+}
+.pill {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--stone-text);
+  white-space: nowrap;
+}
+
+/* --- contact ----------------------------------------------------- */
+.contact-lines { list-style: none; margin: 0; padding: 0; }
+.contact-lines li { margin-bottom: 0.6rem; }
+
+/* --- footer ------------------------------------------------------ */
+footer.site {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.25rem 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+footer.site .foot-left {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: var(--stone-text);
+  font-size: 0.9rem;
+}
+footer.site .mark svg { width: 26px; height: auto; display: block; }
+footer.site nav a {
+  color: var(--stone-text);
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-left: 1.5rem;
+}
+footer.site nav a:hover { color: var(--clay); }
+
+/* --- legal pages -------------------------------------------------- */
+article.legal {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+article.legal h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); }
+article.legal h2 { font-size: 1.25rem; margin-top: 2.25rem; }
+article.legal h3 { font-size: 1.05rem; margin-top: 1.5rem; }
+article.legal .effective { color: var(--stone-text); margin-bottom: 2rem; }
+article.legal ul { padding-left: 1.25rem; }
+article.legal li { margin-bottom: 0.4rem; }
+article.legal address { font-style: normal; line-height: 1.7; }
+
+/* --- skip link ----------------------------------------------------- */
+.skip {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--ink); color: var(--paper);
+  padding: 0.5rem 1rem; z-index: 10;
+}
+.skip:focus { left: 0.5rem; top: 0.5rem; }
+
+@media (max-width: 46rem) {
+  header.site { padding: 1.25rem 1.25rem; }
+  nav.site a { margin-left: 1rem; font-size: 0.875rem; white-space: nowrap; }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nesvrta — app icon / avatar, 200x200. Monoline geometric, cap height 100, stroke 12.
+     Strokes are live: apply Object > Expand / Outline Stroke once before sending to print or cutting. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Nesvrta">
+  <rect width="200" height="200" rx="46" fill="#16130F"/>
+  <defs>
+    <clipPath id="iB"><rect x="-40" y="0" width="400" height="100"/></clipPath>
+    <clipPath id="iT"><rect x="-40" y="0" width="400" height="150"/></clipPath>
+  </defs>
+  <g fill="none" stroke="#F4F0E7" stroke-width="12" stroke-linecap="butt" transform="translate(61,41)">
+    <g clip-path="url(#iB)"><path d="M6 0V100"/><path d="M68 0V100"/></g>
+    <g clip-path="url(#iT)"><path d="M6 0L76.4 113.6"/></g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nesvrta — MICRO CUT — use below 24px. Stroke 20 instead of 12. Monoline geometric, cap height 100, stroke 12.
+     Strokes are live: apply Object > Expand / Outline Stroke once before sending to print or cutting. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 84 122" width="84" height="122" role="img" aria-label="Nesvrta">
+  <defs>
+    <clipPath id="bandC"><rect x="-40" y="0" width="760" height="100"/></clipPath>
+    <clipPath id="tailC"><rect x="-40" y="0" width="760" height="150"/></clipPath>
+  </defs>
+  <g fill="none" stroke="#16130F" stroke-width="20" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12">
+    <g clip-path="url(#bandC)"><path d="M6 0V100"/><path d="M68 0V100"/></g>
+    <g clip-path="url(#tailC)"><path d="M6 0L76.4 113.6"/></g>
+  </g>
+</svg>
