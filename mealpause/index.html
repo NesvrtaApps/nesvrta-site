@@ -4,53 +4,153 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>MealPause — Nesvrta</title>
-<meta name="description" content="A calm intermittent-fasting timer for iPhone and Apple Watch.">
+<title>MealPause — Fasting, with a pause button.</title>
+<meta name="description" content="A calm intermittent-fasting timer for iPhone and Apple Watch. No account, no sign-in. Your data stays on your devices.">
 <link rel="canonical" href="https://nesvrta.com/mealpause/">
 <link rel="icon" type="image/png" sizes="180x180" href="icon-180.png">
 <link rel="apple-touch-icon" href="icon-180.png">
-<!-- MealPause landing page. Linked from every image shared out of the app (QR code + URL).
-     Self-contained: no scripts, no external assets, no tracking. -->
-<style>
-  body { margin: 0; padding: 2rem 1rem; background: #fff8f3; color: #1d2b3a; font: 17px/1.55 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
-  main { max-width: 42rem; margin: 0 auto; }
-  header { display: flex; align-items: center; gap: 0.85rem; margin: 0 0 2rem; }
-  header img { width: 72px; height: 72px; border-radius: 22%; display: block; }
-  header .name { font-size: 1.2rem; font-weight: 600; margin: 0; }
-  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 0.5rem; }
-  p, li { margin: 0 0 1rem; }
-  ul { padding-left: 1.25rem; }
-  a { color: #b0413e; }
-  em { color: #5b6b7a; }
-  footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid rgba(29, 43, 58, 0.15); }
-  footer p { margin: 0 0 0.5rem; }
-  @media (prefers-color-scheme: dark) {
-    body { background: #121820; color: #e9eef3; }
-    a { color: #f29b95; }
-    em { color: #a3b0bd; }
-    footer { border-top-color: rgba(233, 238, 243, 0.18); }
-  }
-</style>
+<meta name="theme-color" content="#F3EEE9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101F30" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nesvrta.com/mealpause/">
+<meta property="og:title" content="MealPause — Fasting, with a pause button.">
+<meta property="og:description" content="A calm intermittent-fasting timer for iPhone and Apple Watch. No account, no sign-in. Your data stays on your devices.">
+<meta property="og:image" content="https://nesvrta.com/mealpause/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MealPause: Fasting, with a pause button. A calm intermittent-fasting timer for iPhone and Apple Watch.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- MealPause landing page, pre-launch state. No scripts, no third-party requests. data-id = the copy ID in landing-copy-en.md. -->
+<style>:root{--g:#F3EEE9;--ink:#17324D;--sec:#5B6B7A;--card:#FFFFFF;--line:rgba(23,50,77,.14);--ul:#B4503F;--tag:#FDEDEB;--tint:#F2DED8;--arc:#F2DCD5;--keto:#17324D;--pad:clamp(20px,5vw,80px);color-scheme:light dark}@media (prefers-color-scheme:dark){:root{--g:#101F30;--ink:#EAF1F8;--sec:#8DA2B8;--card:#17293D;--line:rgba(234,241,248,.14);--ul:#EE6B5C;--tag:#3E3543;--tint:#382D38;--arc:#17293D;--keto:#4F83E0}}*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;text-size-adjust:100%}body{margin:0;background:var(--g);color:var(--ink);font:1.0625rem/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}h1,h2,h3,.wm{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Helvetica,Arial,sans-serif}h1,h2,h3,p,figure,ul{margin:0}img{display:block}a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--ul);text-decoration-thickness:2px;text-underline-offset:5px}.vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}.wrap{max-width:1120px;margin:0 auto;padding:0 var(--pad)}.sec{padding-top:clamp(64px,8vw,120px)}h2{font-size:clamp(2rem,4vw,3rem);line-height:1.08;font-weight:800;letter-spacing:-.02em;text-wrap:balance}.note{font-size:.875rem;line-height:1.45;color:var(--sec);max-width:42em;text-wrap:pretty}.top{display:flex;align-items:center;gap:12px;padding-top:20px}.icon{width:40px;height:40px;border-radius:22.37%}.wm{font-size:1.3125rem;line-height:1;font-weight:800;letter-spacing:-.01em}.wm .p{color:#EE6B5C}.hero{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(36px,5vw,72px);padding-top:clamp(36px,5vw,64px)}.hero>div{flex:1 1 340px;min-width:0}.htext{display:flex;flex-direction:column;gap:22px}h1{font-size:clamp(2.625rem,6.2vw,4.5rem);line-height:1.03;font-weight:800;letter-spacing:-.025em;text-wrap:balance}.lead{font-size:clamp(1.125rem,1.9vw,1.3125rem);line-height:1.5;color:var(--sec);max-width:30em;text-wrap:pretty}.soon{align-self:flex-start;max-width:100%;display:flex;align-items:center;min-height:48px;padding:11px 22px;border-radius:999px;background:var(--card);border:1.5px solid var(--line);font-size:1.0625rem;line-height:1.3;font-weight:600}.badge{align-self:flex-start;display:block;margin:12px 0;text-decoration:none}.badge img{height:48px;width:auto}.meta{font-size:.9375rem;line-height:1.45;color:var(--sec);max-width:30em;text-wrap:pretty}.hpic{position:relative;display:flex;justify-content:center}.arc{position:absolute;left:4%;right:4%;bottom:3%;aspect-ratio:1;border-radius:50%;background:var(--arc)}.hpic img{position:relative;width:100%;max-width:520px;height:auto}.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px;padding-top:clamp(40px,6vw,88px)}.card{background:var(--card);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:10px}.frow{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px}.disc{flex:none;width:44px;height:44px;border-radius:50%;background:var(--tag);display:flex;align-items:center;justify-content:center}.dots{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}.dots span{width:10px;height:10px;border-radius:50%}.dots span:nth-child(1){background:#EE6B5C}.dots span:nth-child(2){background:#F2C14E}.dots span:nth-child(3){background:#3BA7A0}.dots span:nth-child(4){background:#8B6AD7}.dots span:nth-child(5){background:#4BAA72}.dots span:nth-child(6){background:var(--keto)}.dots span:nth-child(7){background:#D9503F}.dots span:nth-child(8){background:#D9A63B}.dots span:nth-child(9){background:#2B8078}h3{font-size:1.1875rem;line-height:1.3;font-weight:700}.card p{font-size:1rem;line-height:1.5;color:var(--sec);text-wrap:pretty}.stack{display:flex;flex-direction:column;gap:28px}.row{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--pad);margin:0 calc(-1*var(--pad));padding:2px var(--pad) 14px}.row figure{flex:0 0 248px;scroll-snap-align:start;display:flex;flex-direction:column;gap:12px}.row figure img{width:248px;height:auto;border-radius:20px}figcaption{font-size:1rem;line-height:1.35;font-weight:600}.wrow figure{flex:0 0 auto;align-items:center}.frame{padding:9px;border-radius:46px;background:#2C2C2E}.wrow figure img.w{width:150px;height:183px;border-radius:37px}.wrow figcaption{font-size:.9375rem;text-align:center}.wlead{font-size:clamp(1.125rem,1.9vw,1.25rem);line-height:1.5;color:var(--sec);max-width:34em;text-wrap:pretty}.track{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}.track ul{padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}.track li{font-size:1rem;line-height:1.5;text-wrap:pretty}.tag{display:inline-block;margin-left:6px;padding:0 9px;border-radius:999px;background:var(--tag);font-size:.8125rem;line-height:22px;font-weight:700;vertical-align:1px;white-space:nowrap}.priv{background:var(--card);border-radius:28px;padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;gap:18px}.priv .disc{width:52px;height:52px}.priv p{font-size:clamp(1.0625rem,1.8vw,1.1875rem);line-height:1.55;max-width:38em;text-wrap:pretty}.plink{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:1.0625rem;font-weight:600}.fp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;align-items:start}.big{background:var(--card);border-radius:28px;padding:clamp(24px,3.5vw,40px);display:flex;flex-direction:column;gap:18px}.big h3{font-size:1.625rem;line-height:1.2;font-weight:800}.sub{font-size:1rem;line-height:1.5;color:var(--sec)}.list{padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}.list li{display:flex;gap:12px;align-items:flex-start;font-size:1rem;line-height:1.5;text-wrap:pretty}.ic{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.2}.list li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;background:var(--ul);-webkit-mask:var(--m) center/20px no-repeat;mask:var(--m) center/20px no-repeat}.list .ck{--m:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%272.4%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M20 6L9 17l-5-5%27/%3E%3C/svg%3E")}.list .pl{--m:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%272.2%27 stroke-linecap=%27round%27%3E%3Cpath d=%27M12 5v14M5 12h14%27/%3E%3C/svg%3E")}.prices{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:12px}.ph{font-size:.8125rem;line-height:1.3;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sec)}.pr{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 16px;font-size:1rem;line-height:1.45}.pr span:first-child{font-weight:600}.pn{font-size:.875rem;line-height:1.45;color:var(--sec)}.gsec{padding-top:clamp(40px,5vw,64px)}.gift{background:var(--tint);border-radius:28px;padding:clamp(28px,5vw,56px);display:flex;flex-wrap:wrap;gap:20px 32px;align-items:flex-start}.gdisc{flex:none;width:56px;height:56px;border-radius:50%;background:#EE6B5C;color:#FFFFFF;display:flex;align-items:center;justify-content:center}.gtext{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:14px}.gtext h2{font-size:clamp(1.75rem,3.4vw,2.5rem);line-height:1.1}.gtext p{font-size:1.0625rem;line-height:1.55;max-width:38em;text-wrap:pretty}.faq{max-width:780px;display:flex;flex-direction:column;gap:20px}.qs{border-bottom:1px solid var(--line)}details{border-top:1px solid var(--line)}summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:16px 0;font-size:1.125rem;line-height:1.35;font-weight:600}summary::-webkit-details-marker{display:none}summary svg{flex:none}details[open] summary svg{transform:rotate(180deg)}details p{padding:0 0 20px;font-size:1.0625rem;line-height:1.55;color:var(--sec);max-width:40em;text-wrap:pretty}footer{margin-top:clamp(72px,9vw,128px);border-top:1px solid var(--line)}.foot{max-width:1120px;margin:0 auto;padding:32px var(--pad) 40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px 48px}.fcol{display:flex;flex-direction:column;gap:14px}.fbrand{display:flex;align-items:center;gap:10px}.fbrand .icon{width:32px;height:32px}.fbrand .wm{font-size:1.125rem}.fq{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-size:1rem;line-height:1.5}.fq a,.flinks a{display:inline-flex;align-items:center;min-height:44px;text-underline-offset:4px}.fq a{font-weight:600}.flegal{display:flex;flex-direction:column;gap:8px;font-size:.9375rem;line-height:1.5}.flinks{display:flex;flex-wrap:wrap;align-items:center;gap:0 20px}.flinks>*{flex:none;white-space:nowrap}.disc2{color:var(--sec)}@media (min-width:1024px){.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 24px;overflow:visible;margin:0;padding:0}.gal figure{flex:none;gap:14px}.gal figure img{width:100%;border-radius:22px}.gal figcaption{font-size:1.0625rem}.wrow{justify-content:space-between;gap:24px;overflow:visible;margin:12px 0 0;padding:0}.wrow .frame{padding:11px;border-radius:54px}.wrow figure img.w{width:180px;height:219px;border-radius:44px}.wrow figcaption{font-size:1rem}}</style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-cv" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol></svg>
+<div class="wrap">
+<header class="top"><img class="icon" src="img/icon-40.png" srcset="img/icon-80.png 2x, img/icon-120.png 3x" alt="" width="40" height="40"><div class="wm" data-id="L01"><span>Meal</span><span class="p">Pause</span></div></header>
 <main>
-<header>
-<img src="icon-72.png" srcset="icon-144.png 2x" width="72" height="72" alt="MealPause app icon">
-<p class="name">MealPause</p>
-</header>
-<h1>Fasting, with a pause button.</h1>
-<p><em>A calm intermittent-fasting timer for iPhone and Apple Watch.</em></p>
-<ul>
-<li>Track your fast and see each stage as you go.</li>
-<li>Start, end and log water from your wrist.</li>
-<li>Your data stays on your phone.</li>
+<section class="hero">
+<div class="htext">
+<h1 data-id="L02">Fasting, with a pause button.</h1>
+<p data-id="L03" class="lead">A calm intermittent-fasting timer for iPhone and Apple Watch. No account, no sign-in. Your data stays on your devices.</p>
+<div class="soon" data-id="L04">Coming soon to the App Store</div>
+<p data-id="L06" class="meta">A free download for iPhone with iOS 16.4 or later. The Apple Watch app is optional.</p>
+</div>
+<div class="hpic"><div class="arc" aria-hidden="true"></div><picture><source media="(prefers-color-scheme: dark)" srcset="img/hero-dark.webp" width="1040" height="1557"><img src="img/hero-light.webp" alt="iPhone showing a running 16:8 fast at 12 hours 28 minutes, in the Fat Burning stage, with the Apple Watch app beside it showing the same fast." data-alt-id="A01" width="1040" height="1557" fetchpriority="high"></picture></div>
+</section>
+<section class="feats" aria-label="Key features" data-label-id="L07">
+<div class="card"><div class="frow"><div class="disc" aria-hidden="true"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4 M12 14l3-3 M4 14a8 8 0 1 0 16 0a8 8 0 1 0-16 0"/></svg></div><div class="dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div><h3 data-id="L08">Follow every stage</h3><p data-id="L09">See what may be happening in your body as the hours pass, across 9 fasting stages.</p></div>
+<div class="card"><div class="frow"><div class="disc" aria-hidden="true"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12a6 6 0 1 0 12 0a6 6 0 1 0-12 0 M12 10v2l1 1 M16.13 7.66l-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05 M7.88 16.36l.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05"/></svg></div></div><h3 data-id="L10">On your wrist and Lock Screen</h3><p data-id="L11">Apple Watch app, widgets, a Live Activity and the Dynamic Island.</p></div>
+<div class="card"><div class="frow"><div class="disc" aria-hidden="true"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div></div><h3 data-id="L12">Every fast, kept</h3><p data-id="L13">Your history and calendar, with notes, water and weight.</p></div>
+<div class="card"><div class="frow"><div class="disc" aria-hidden="true"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div><h3 data-id="L14">Private by design</h3><p data-id="L15">No account, no ads, no third-party tracking.</p></div>
+</section>
+<section class="sec stack">
+<h2 data-id="L16">How it looks.</h2>
+<div class="row gal">
+<figure><img src="img/gallery-01-everywhere.webp" alt="iPhone showing a running fast in the Fat Burning stage, 12 hours 28 minutes elapsed, with the Apple Watch app beside it." data-alt-id="A03" width="700" height="1082" loading="lazy"><figcaption data-id="L17">Your fast, everywhere.</figcaption></figure>
+<figure><img src="img/gallery-02-lock-screen.webp" alt="The Dynamic Island and the Lock Screen Live Activity showing a fast in the Ketosis stage, about 18 hours elapsed, with a new-stage notification below." data-alt-id="A04" width="700" height="1082" loading="lazy"><figcaption data-id="L18">On your Lock Screen.</figcaption></figure>
+<figure><img src="img/gallery-03-at-a-glance.webp" alt="Home Screen with two MealPause widgets showing 18 hours elapsed in the Ketosis stage, the timer in the Dynamic Island, and the MealPause app icon." data-alt-id="A05" width="700" height="1082" loading="lazy"><figcaption data-id="L19">At a glance.</figcaption></figure>
+<figure><img src="img/gallery-04-log.webp" alt="The Log tab for Friday, October 16: the week’s fasts, a running 16:8 fast at 79 percent, and water at 36 of 85 ounces, with the watch Water screen beside it." data-alt-id="A06" width="700" height="1082" loading="lazy"><figcaption data-id="L20">Every fast, kept.</figcaption></figure>
+<figure><img src="img/gallery-05-progress.webp" alt="The Progress tab for October 10 to 16: an average fast of 16 hours 32 minutes, a bar for each day, and how you felt, weight and water below, with the watch week view beside it." data-alt-id="A07" width="700" height="1082" loading="lazy"><figcaption data-id="L21">See your rhythm.</figcaption></figure>
+<figure><img src="img/gallery-06-learn.webp" alt="The Stages of fasting screen open at Digestion, 0 to 2 hours, with an illustration and a short article, and the watch Stage screen showing Fat Burning." data-alt-id="A08" width="700" height="1082" loading="lazy"><figcaption data-id="L22">Know what’s happening.</figcaption></figure>
+<figure><img src="img/gallery-07-share.webp" alt="The completed-fast screen for a 16 hour 5 minute fast, from Digestion to Fat Burning, beside the share card it makes." data-alt-id="A09" width="700" height="1082" loading="lazy"><figcaption data-id="L23">Share what you’re proud of.</figcaption></figure>
+</div>
+<p data-id="L24" class="note">The Lock Screen and Home Screen pictures show a 20:4 fast, one of the longer plans in MealPause Plus.</p>
+</section>
+<section class="sec stack" style="gap:20px">
+<h2 data-id="L25">On your wrist.</h2>
+<p data-id="L26" class="wlead">Start and end a fast, log water, and see your stage and your week from your wrist, with complications and Smart Stack.</p>
+<div class="row wrow">
+<figure><div class="frame"><img class="w" src="img/watch-01-now-running-fast.webp" alt="Apple Watch showing a running fast: 16 hours 3 minutes, 1 hour 56 minutes left, in the Fat Burning stage, with an End fast button." data-alt-id="A10" width="422" height="514" loading="lazy"></div><figcaption data-id="L27">Your fast</figcaption></figure>
+<figure><div class="frame"><img class="w" src="img/watch-02-stage.webp" alt="Apple Watch Stage screen: Fat Burning, with a short description and the next stage, Ketosis, at 3:45 PM." data-alt-id="A11" width="422" height="514" loading="lazy"></div><figcaption data-id="L28">Your stage</figcaption></figure>
+<figure><div class="frame"><img class="w" src="img/watch-03-water.webp" alt="Apple Watch Water screen: 1.25 of 2.50 litres, with an Add 250 ml button." data-alt-id="A12" width="422" height="514" loading="lazy"></div><figcaption data-id="L29">Water</figcaption></figure>
+<figure><div class="frame"><img class="w" src="img/watch-04-week.webp" alt="Apple Watch week view: hours fasted for each day against an 18-hour goal, with today’s fast at 16 hours 3 minutes so far." data-alt-id="A13" width="422" height="514" loading="lazy"></div><figcaption data-id="L30">Your week</figcaption></figure>
+<figure><div class="frame"><img class="w" src="img/watch-05-face-modular-ultra-complication.webp" alt="An Apple Watch face with the MealPause complication: Fat Burning, 16 hours 6 minutes, 1 hour 54 minutes left." data-alt-id="A14" width="422" height="514" loading="lazy"></div><figcaption data-id="L31">On your watch face</figcaption></figure>
+</div>
+<p data-id="L32" class="note">Shown during an 18:6 fast, one of the longer plans in MealPause Plus.</p>
+</section>
+<section class="sec stack">
+<h2 data-id="L33">Log, look back, learn.</h2>
+<div class="track">
+<div class="card"><h3 data-id="L34">Log</h3><ul><li><span data-id="L35">Water, weight and notes.</span></li><li><span data-id="L36">Electrolytes, body measurements and blood markers.</span><span class="tag" aria-hidden="true" data-id="L51">Plus</span><span class="vh"> (<span data-id="L52">MealPause Plus</span>)</span></li></ul></div>
+<div class="card"><h3 data-id="L37">Progress</h3><ul><li><span data-id="L38">Statistics by week, month and all time.</span></li><li><span data-id="L39">Share a card when you reach a goal, or share your week.</span></li></ul></div>
+<div class="card"><h3 data-id="L40">Learn</h3><ul><li><span data-id="L41">24 articles and 18 recipes.</span></li><li><span data-id="L42">12 articles are free, including every safety article.</span></li><li><span data-id="L43">12 more in-depth articles on weight, sleep, food and your body.</span><span class="tag" aria-hidden="true" data-id="L51">Plus</span><span class="vh"> (<span data-id="L52">MealPause Plus</span>)</span></li></ul></div>
+<div class="card"><h3 data-id="L44">Apple Health</h3><ul><li><span data-id="L45">Optional sync for weight and water, off until you turn it on.</span></li></ul></div>
+<div class="card"><h3 data-id="L46">Also</h3><ul><li><span data-id="L47">Reminders with quick actions on phone and wrist</span></li><li><span data-id="L48">Backups and Excel export</span></li><li><span data-id="L49">Dark and pitch-black themes</span></li><li><span data-id="L50">7 languages</span></li></ul></div>
+</div>
+</section>
+<section class="sec">
+<div class="priv">
+<div class="disc" aria-hidden="true"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+<h2 data-id="L53">Private by design.</h2>
+<p data-id="L54">There is no account and no sign-in. Everything you record — your fasts, notes, weight, water, measurements, goals and settings — is stored only on your device. There are no ads and no third-party tracking or analytics in the app.</p>
+<p data-id="L55">Only two things ever leave your phone, and neither is anything you record: an anonymous check whether MealPause Plus is active, and, if your plan includes a gift, a request for your gift code.</p>
+<a class="plink" href="privacy.html" data-id="L56">Read the Privacy Policy</a>
+</div>
+</section>
+<section class="sec stack">
+<h2 data-id="L57">What’s free, and what Plus adds.</h2>
+<div class="fp">
+<div class="big">
+<h3 data-id="L58">Free</h3>
+<ul class="list">
+<li class="ck"><span data-id="L59">Fasting timer with daily plans from 11:13 up to 16:8 (11:13, 12:12, 14:10, 16:8), plus Flexi for days that don’t fit a plan</span></li>
+<li class="ck"><span data-id="L60">The guided program Ease In</span></li>
+<li class="ck"><span data-id="L61">All 9 fasting stages</span></li>
+<li class="ck"><span data-id="L62">Apple Watch app, complications and Smart Stack</span></li>
+<li class="ck"><span data-id="L63">Home Screen and Lock Screen widgets; Live Activity on the Lock Screen and in the Dynamic Island</span></li>
+<li class="ck"><span data-id="L64">Reminders with quick actions on phone and wrist</span></li>
+<li class="ck"><span data-id="L65">Statistics, calendar and full fast history; shareable cards</span></li>
+<li class="ck"><span data-id="L66">Notes, weight and water; Apple Health sync for weight and water</span></li>
+<li class="ck"><span data-id="L67">Dark and pitch-black themes; backups and Excel export</span></li>
+<li class="ck"><span data-id="L68">12 articles, including every safety article; 18 recipes</span></li>
 </ul>
-<p><strong>Coming soon to the App Store.</strong></p>
-<p>Questions or feedback? Email <a href="mailto:support@nesvrta.com">support@nesvrta.com</a></p>
-<footer>
-<p><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <span style="white-space: nowrap">&copy; Nesvrta LLC</span></p>
-<p><em>General wellbeing information, not medical advice.</em></p>
-</footer>
+</div>
+<div class="big">
+<div style="display:flex;flex-direction:column;gap:6px"><h3 data-id="L69">MealPause Plus</h3><p data-id="L70" class="sub">A subscription for people who want to go further.</p></div>
+<ul class="list">
+<li class="pl"><span data-id="L71">Longer plans: 18:6, 19:5, 20:4 and OMAD</span></li>
+<li class="pl"><span data-id="L72">Guided programs: 21-Day Progressive, Build Routine, Go Deeper</span></li>
+<li class="pl"><span data-id="L73">Custom schedules</span></li>
+<li class="pl"><span data-id="L74">Electrolytes, body measurements and blood markers</span></li>
+<li class="pl"><span data-id="L75">Water reminders on your own interval</span></li>
+<li class="pl"><span data-id="L76">12 in-depth articles on weight, sleep, food and your body</span></li>
+</ul>
+<div class="prices">
+<div data-id="L77" class="ph">Prices in the US</div>
+<div class="pr"><span data-id="L78">Monthly</span><span data-id="L79">$1.99 a month</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><div class="pr"><span data-id="L80">Yearly</span><span data-id="L81">$19.99 a year</span></div><div data-id="L82" class="pn">With a 7-day free trial for eligible new subscribers.</div></div>
+<div class="pr"><span data-id="L83">Lifetime</span><span data-id="L84">$39.99 once</span></div>
+<div data-id="L85" class="pn">Prices vary by country or region.</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sec faq">
+<h2 data-id="L90">Questions</h2>
+<div class="qs">
+<details><summary><span data-id="L91">Is MealPause free?</span><svg class="ic" aria-hidden="true" width="18" height="18"><use href="#i-cv"/></svg></summary><p data-id="L92">Yes. MealPause is a free download, and the timer, all 9 stages, the Apple Watch app, widgets, Live Activity, history, notes, water and weight are free. MealPause Plus adds longer plans, guided programs, custom schedules, more logs and in-depth articles.</p></details>
+<details><summary><span data-id="L93">Do I need an account?</span><svg class="ic" aria-hidden="true" width="18" height="18"><use href="#i-cv"/></svg></summary><p data-id="L94">No. There’s no account and no sign-in.</p></details>
+<details><summary><span data-id="L95">Do I need an Apple Watch?</span><svg class="ic" aria-hidden="true" width="18" height="18"><use href="#i-cv"/></svg></summary><p data-id="L96">No. The watch app is optional; everything works on iPhone.</p></details>
+<details><summary><span data-id="L97">What do I need?</span><svg class="ic" aria-hidden="true" width="18" height="18"><use href="#i-cv"/></svg></summary><p data-id="L98">An iPhone with iOS 16.4 or later. The watch app needs watchOS 9.0 or later. MealPause is not available for iPad, Mac or Apple Vision Pro.</p></details>
+<details><summary><span data-id="L99">Does it work offline?</span><svg class="ic" aria-hidden="true" width="18" height="18"><use href="#i-cv"/></svg></summary><p data-id="L100">Your timer and everything you log work without a connection. Checking MealPause Plus and loading a gift code need one.</p></details>
+<details><summary><span data-id="L101">Which languages?</span><svg class="ic" aria-hidden="true" width="18" height="18"><use href="#i-cv"/></svg></summary><p data-id="L102">English, Deutsch, Español, Italiano, Français, Português and العربية.</p></details>
+<details><summary><span data-id="L103">How do I cancel MealPause Plus?</span><svg class="ic" aria-hidden="true" width="18" height="18"><use href="#i-cv"/></svg></summary><p data-id="L104">In your iPhone’s Settings › your name › Subscriptions. Subscriptions renew automatically until you cancel.</p></details>
+<details><summary><span data-id="L105">Is this medical advice?</span><svg class="ic" aria-hidden="true" width="18" height="18"><use href="#i-cv"/></svg></summary><p data-id="L106">No. MealPause shares general wellbeing information, not medical advice. Fasting is not right for everyone. Please don’t fast if you are pregnant or breastfeeding, are under 18, or have or have had an eating disorder, unless your care team agrees. Talk to a doctor first if you have diabetes, take regular medication, have another medical condition, are underweight, or are recovering from surgery.</p></details>
+</div>
+</section>
 </main>
+</div>
+<footer>
+<div class="foot">
+<div class="fcol">
+<div class="fbrand"><img class="icon" src="img/icon-40.png" srcset="img/icon-80.png 2x, img/icon-120.png 3x" alt="" width="32" height="32"><div class="wm" data-id="L01"><span>Meal</span><span class="p">Pause</span></div></div>
+<div class="fq"><span data-id="L109">Questions or feedback?</span><a href="mailto:support@nesvrta.com" data-id="L110">support@nesvrta.com</a></div>
+</div>
+<div class="flegal">
+<div class="flinks"><a href="privacy.html" data-id="L111">Privacy Policy</a><a href="terms.html" data-id="L112">Terms of Use</a><span data-id="L113">© Nesvrta LLC</span></div>
+<div data-id="L114" class="disc2">General wellbeing information, not medical advice.</div>
+</div>
+</div>
+</footer>
 </body>
 </html>
