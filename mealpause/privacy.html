@@ -27,17 +27,17 @@
 <body>
 <main>
 <h1>MealPause — Privacy Policy</h1>
-<p><em>Effective date: September 16, 2026.</em></p>
+<p><em>Effective date: October 29, 2026.</em></p>
 <p>Nesvrta LLC ("we," "us," "our") operates the MealPause mobile application (the "App"). MealPause is built to be private by default, and this policy explains what that means.</p>
 <h2>The short version</h2>
 <p>There is no account and no sign-in. Everything you record in the app — your fasts, notes, weight, water, measurements, goals, and settings — is stored <strong>only on your device</strong>. We have no server that receives it, and we do not sell, share, or transmit it. There are <strong>no ads</strong> and <strong>no third-party tracking or analytics</strong> in the app.</p>
-<p>The one thing that leaves your device is a <strong>purchase-status check</strong>: MealPause asks <strong>RevenueCat</strong>, a purchase-verification service, whether MealPause Plus is active, using a random identifier — whether or not you ever buy anything. Everything else you record stays on your phone. See "Purchases" below.</p>
+<p>Two things can leave your device, and neither is anything you record. MealPause asks <strong>RevenueCat</strong>, a purchase-verification service, whether MealPause Plus is active, using a random identifier — whether or not you ever buy anything. And if your plan includes a gift, MealPause asks <strong>our gifting service</strong> for your gift code, using the same random identifier. Separately, RevenueCat tells our gifting service about <strong>every</strong> MealPause Plus purchase — not only one that includes a gift — so that it knows when a gift has been paid for. Everything you record stays on your phone. See "Purchases" and "Gifting" below.</p>
 <h2>What we store, and where</h2>
 <p>All of your data lives locally on your device, in the app's private storage. It never leaves your device unless <strong>you</strong> choose to export it (see "Your data is yours" below). If you delete the app, the data stored on your phone is removed with it. Two things are not: anything MealPause wrote into Apple Health stays in the Health app until you delete it there, and an Apple Watch keeps its last snapshot of your fast until the watch app is removed.</p>
 <h2>What we do not do</h2>
 <ul>
 <li>We do <strong>not</strong> create accounts or ask you to sign in.</li>
-<li>We do <strong>not</strong> collect, upload, or store your personal or health data on any server.</li>
+<li>We do <strong>not</strong> collect, upload, or store anything you record — your fasts, weight, water, notes, measurements or health data — on any server.</li>
 <li>We do <strong>not</strong> use third-party analytics, advertising, attribution, or tracking SDKs.</li>
 <li>We do <strong>not</strong> show ads.</li>
 </ul>
@@ -47,12 +47,26 @@
 <p>MealPause Plus is bought through <strong>Apple's App Store</strong>. Apple handles the payment and your receipt under its own privacy policy; we never see your card, your billing address, or your Apple ID.</p>
 <p>To know whether Plus is switched on, we use <strong>RevenueCat</strong>, a purchase-verification service. MealPause checks your purchase status with RevenueCat whether or not you buy anything. RevenueCat receives only your purchase status — which MealPause product was bought, if any, and whether it is still active — together with a random identifier it generates for your device. It is not connected to any account, because MealPause has no accounts.</p>
 <p><strong>RevenueCat never receives anything you record in MealPause.</strong> Not your fasts, your weight, your water, your notes, your mood, your electrolyte, body or blood readings, or anything from Apple Health. Those never leave your device.</p>
-<p>We see aggregate subscription counts in RevenueCat's dashboard, not individual people. RevenueCat's own privacy policy is at <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>.</p>
+<p>In RevenueCat's dashboard we see subscriptions under their random identifiers, never a name or an Apple ID. RevenueCat's own privacy policy is at <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>.</p>
 <p>We do not link purchase information to your identity, and we do not use it for advertising. There is no advertising in MealPause.</p>
+<h2>Gifting</h2>
+<p>A Yearly or Lifetime purchase includes one free year of MealPause Plus to give to a friend. Our gifting service, which runs on Cloudflare, keeps track of which purchases include a gift and hands out the gift codes.</p>
+<p><strong>What it receives about every purchase.</strong> For every MealPause Plus purchase — monthly, yearly or lifetime, with or without a gift, and a gifted year someone redeems — RevenueCat sends our gifting service the purchase's events: the transaction numbers Apple assigns, the product, the price, any offer used, the dates, whether it was a test purchase, and the random identifier described above. Never your name, your email, your Apple ID, or anything you record in MealPause.</p>
+<p><strong>Only if your plan includes a gift: your gift code.</strong> To show you your gift code, MealPause contacts our gifting service itself. It sends the same random identifier, together with a security check from Apple (App Attest) that confirms the request comes from the real MealPause app on a real iPhone.</p>
+<p><strong>What it keeps, and for how long.</strong> Only what it needs:</p>
+<ul>
+<li>The random identifier, only as a one-way hash, with each purchase it was named for — deleted with that purchase's records, unless a gift code was given for it (see the last item).</li>
+<li>Each purchase's transaction numbers, product, price, offer and dates — deleted 30 days after a gift code is given for it, or 13 months after the purchase ends if none is.</li>
+<li>The security key Apple's check made on your iPhone — its public half, an identifier Apple gives it, a counter, how the app was installed and its version (as Apple's check reports them), and the one-way hash it was first used with — deleted 13 months after it was last used.</li>
+<li>Short-lived records against abuse and repeats: RevenueCat's id for each event, so that a repeated delivery is ignored (kept 30 days), and request counters and one-time checks (kept a day at most).</li>
+<li>The record of which gift code was given: the purchase's original transaction number, the code and its expiry date, whether it was a test purchase, when the code was given, and when you shared it from the app. It is kept for as long as gifting runs, so that each purchase gives one gift, ever — and the one-way hash of your random identifier is kept with it until the code expires, so MealPause can show you your code again.</li>
+</ul>
+<p>Your IP address is used only in the moment, to limit abuse, and is not stored by us.</p>
+<p>None of it is used for advertising or analytics, sold, or shared. Your friend redeems the code with Apple, and Apple does not tell us which code someone redeemed — so our gifting service cannot connect a gift to the friend who used it. To have your gifting records deleted, write to us with the Purchase ID shown in Settings › Help &amp; about, under About.</p>
 <h2>Your data is yours</h2>
-<p>You can export a full backup of your data to a file you control, and restore it, at any time from Settings → Import / Export. That file stays on your device or wherever you choose to save it. You can also delete all your data from within the app at any time.</p>
+<p>You can export a full backup of your data to a file you control, and restore it, at any time from Settings › Backup &amp; export. That file stays on your device or wherever you choose to save it. You can also delete all your data from within the app at any time.</p>
 <h2>Children</h2>
-<p>MealPause is not directed to children. The app itself stores nothing about who you are; the only information about you that exists outside your device is the purchase status and random identifier described under "Purchases", which is not linked to any account or person.</p>
+<p>MealPause is not directed to children. The app itself stores nothing about who you are; the only information about you that exists outside your device is the random identifier and the purchase records described under "Purchases" and "Gifting", none of which is linked to any account or person.</p>
 <h2>Changes to this policy</h2>
 <p>If this policy changes, we'll update it here and revise the date above.</p>
 <h2>Contact</h2>
